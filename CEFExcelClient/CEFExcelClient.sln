@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CEFExcelClient", "CEFExcelC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CefGlue", "CefGlue\CefGlue.csproj", "{709A4195-82CB-4CCE-A208-71D15CE57826}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CefGlue.WindowsForms", "CefGlue.WindowsForms\CefGlue.WindowsForms.csproj", "{679AF14D-8FF5-4608-BFF8-EC1A7DED04A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{709A4195-82CB-4CCE-A208-71D15CE57826}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{709A4195-82CB-4CCE-A208-71D15CE57826}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{709A4195-82CB-4CCE-A208-71D15CE57826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679AF14D-8FF5-4608-BFF8-EC1A7DED04A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679AF14D-8FF5-4608-BFF8-EC1A7DED04A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679AF14D-8FF5-4608-BFF8-EC1A7DED04A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679AF14D-8FF5-4608-BFF8-EC1A7DED04A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
