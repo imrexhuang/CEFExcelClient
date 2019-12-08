@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Xilium.CefGlue.WindowsForms
 {
-    class CefWebDevToolsClient
+    /* BEG:modbyme */
+    internal sealed class CefWebDevToolsClient : CefClient
     {
     }
+    /* END:modbyme */
 }
