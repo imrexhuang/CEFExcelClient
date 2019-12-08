@@ -17,6 +17,35 @@
 
         public CefWebBrowser()
         {
+            /* BEG: modbyme */
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                CefRuntime.Load();
+
+                CefSettings settings = new CefSettings();
+                settings.CachePath = @"Cache"; //Cache Folder
+                settings.MultiThreadedMessageLoop = false;
+                settings.NoSandbox = true;
+                //settings.LogSeverity = CefLogSeverity.Error;
+                //settings.LogFile = "cef.log";
+                //settings.ResourcesDirPath = System.IO.Path.GetDirectoryName(new Uri(System.Reflection.Assembly.GetEntryAssembly().CodeBase).LocalPath);
+                //settings.RemoteDebuggingPort = 20480;
+                // // settings.SingleProcess = true;
+
+                CefMainArgs mainArgs = new CefMainArgs(Environment.GetCommandLineArgs());
+                CefWebApp app = new CefWebApp(this);
+
+                if (CefRuntime.ExecuteProcess(mainArgs, app, IntPtr.Zero) != -1)
+                {
+                    MessageBox.Show("ExecuteProcess failed");
+                }
+
+                CefRuntime.Initialize(mainArgs, settings, app, IntPtr.Zero);
+
+                Application.Idle += (s, e) => CefRuntime.DoMessageLoopWork();
+            }
+            /* END: modbyme */
+
             SetStyle(
                 ControlStyles.ContainerControl
                 | ControlStyles.ResizeRedraw
@@ -80,7 +109,22 @@
                 var client = CreateWebClient();
 
                 var settings = BrowserSettings;
-                if (settings == null) settings = new CefBrowserSettings { };
+                /* BEG: modbyme */
+                //if (settings == null) settings = new CefBrowserSettings { };
+                if (settings == null)
+                {
+                    settings = new CefBrowserSettings
+                    {
+                        FileAccessFromFileUrls = CefState.Enabled,
+                        JavaScript = CefState.Enabled,
+                        JavaScriptCloseWindows = CefState.Disabled,
+                        LocalStorage = CefState.Enabled,
+                        UniversalAccessFromFileUrls = CefState.Enabled,
+                        WebGL = CefState.Enabled,
+                        WebSecurity = CefState.Disabled
+                    };
+                }
+                /* END: modbyme */
 
                 CefBrowserHost.CreateBrowser(windowInfo, client, settings, StartUrl);
             }
@@ -104,9 +148,16 @@
             }
 
             base.Dispose(disposing);
+
+            /* BEG: modbyme */
+            if (LicenseManager.UsageMode != LicenseUsageMode.Designtime)
+            {
+                CefRuntime.Shutdown();
+            }
+            /* END: modbyme */
         }
 
-    	public event EventHandler BrowserCreated;
+        public event EventHandler BrowserCreated;
 
         internal protected virtual void OnBrowserAfterCreated(CefBrowser browser)
         {
