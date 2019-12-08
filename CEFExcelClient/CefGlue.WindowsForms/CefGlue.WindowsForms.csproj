@@ -46,13 +46,19 @@
   <ItemGroup>
     <Compile Include="AddressChangedEventArgs.cs" />
     <Compile Include="BeforePopupEventArgs.cs" />
+    <Compile Include="CefWebApp.cs" />
     <Compile Include="CefWebBrowser.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CefWebBrowserProcessHandler.cs" />
     <Compile Include="CefWebClient.cs" />
+    <Compile Include="CefWebDevToolsClient.cs" />
+    <Compile Include="CefWebJSDialogHandler.cs" />
+    <Compile Include="CefWebKeyboardHandler.cs" />
     <Compile Include="CefWebLifeSpanHandler.cs" />
     <Compile Include="CefWebDisplayHandler.cs" />
     <Compile Include="CefWebLoadHandler.cs" />
+    <Compile Include="CefWebRenderProcessHandler.cs" />
     <Compile Include="ConsoleMessageEventArgs.cs" />
     <Compile Include="CefWebRequestHandler.cs" />
     <Compile Include="LoadEndEventArgs.cs" />
