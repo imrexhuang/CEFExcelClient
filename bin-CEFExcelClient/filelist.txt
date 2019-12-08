@@ -1,0 +1,8 @@
+D:\RDEV-CEF\CEFExcelClient\CEFExcelClient\bin-CEFExcelClient 的目錄
+
+2019/12/08  下午 05:20             4,608 CEFExcelClient.exe
+2019/12/08  下午 05:20               187 CEFExcelClient.exe.config
+2019/12/08  下午 05:20           818,688 Xilium.CefGlue.dll
+2019/12/08  下午 05:20            26,624 Xilium.CefGlue.WindowsForms.dll
+2019/12/08  下午 05:20           589,974 Xilium.CefGlue.xml
+
