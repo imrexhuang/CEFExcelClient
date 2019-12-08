@@ -12,6 +12,11 @@
         private readonly CefWebLoadHandler _loadHandler;
         private readonly CefWebRequestHandler _requestHandler;
 
+        /* BEG:modbyme */
+        private readonly CefJSDialogHandler _jsDialogHandler;
+        private readonly CefKeyboardHandler _keyboardHandler;
+        /* END:modbyme */
+
         public CefWebClient(CefWebBrowser core)
         {
             _core = core;
@@ -19,6 +24,11 @@
             _displayHandler = new CefWebDisplayHandler(_core);
             _loadHandler = new CefWebLoadHandler(_core);
             _requestHandler = new CefWebRequestHandler(_core);
+
+            /* BEG:modbyme */
+            _jsDialogHandler = new CefWebJSDialogHandler(_core);
+            _keyboardHandler = new CefWebKeyboardHandler(_core);
+            /* END:modbyme */
         }
 
         protected CefWebBrowser Core { get { return _core; } }
@@ -42,5 +52,18 @@
         {
             return _requestHandler;
         }
+
+        /* BEG:modbyme */
+        protected override CefJSDialogHandler GetJSDialogHandler()
+        {
+            return _jsDialogHandler;
+        }
+
+        protected override CefKeyboardHandler GetKeyboardHandler()
+        {
+            return _keyboardHandler;
+        }
+
+        /* END:modbyme */
     }
 }
