@@ -1,13 +1,20 @@
 D:\RDEV-CEF\CEFExcelClient\bin-CEFExcelClient 的目錄
+2019/11/06  下午 03:48         2,890,887 cef.pak
 2019/12/08  下午 04:28             4,608 CEFExcelClient.exe
 2019/12/08  下午 03:19               187 CEFExcelClient.exe.config
+2019/11/06  下午 04:05           654,961 cef_100_percent.pak
+2019/11/06  下午 04:05           806,894 cef_200_percent.pak
+2019/11/06  下午 04:07         1,699,237 cef_extensions.pak
 2019/11/06  下午 04:11        86,249,628 cef_sandbox.lib
 2019/11/06  下午 02:50           972,288 chrome_elf.dll
 2019/11/06  下午 12:03         4,346,120 d3dcompiler_47.dll
+2019/11/06  下午 02:50         6,353,657 devtools_resources.pak
+2019/11/06  下午 12:49        10,426,784 icudtl.dat
 2019/11/06  下午 04:10       116,197,888 libcef.dll
 2019/11/06  下午 04:09            37,104 libcef.lib
 2019/11/06  下午 02:46           374,272 libEGL.dll
 2019/11/06  下午 02:46         7,603,712 libGLESv2.dll
+2019/12/08  下午 05:30    <DIR>          locales
 2019/11/06  下午 02:51            82,118 natives_blob.bin
 2019/11/06  下午 04:07           280,424 snapshot_blob.bin
 2019/12/08  下午 05:27    <DIR>          swiftshader
@@ -15,3 +22,4 @@ D:\RDEV-CEF\CEFExcelClient\bin-CEFExcelClient 的目錄
 2019/12/08  下午 04:26           818,688 Xilium.CefGlue.dll
 2019/12/08  下午 04:26            26,624 Xilium.CefGlue.WindowsForms.dll
 2019/12/08  下午 04:26           589,974 Xilium.CefGlue.xml
+
