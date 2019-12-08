@@ -52,5 +52,15 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CefGlue.WindowsForms\CefGlue.WindowsForms.csproj">
+      <Project>{679af14d-8ff5-4608-bff8-ec1a7ded04a4}</Project>
+      <Name>CefGlue.WindowsForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CefGlue\CefGlue.csproj">
+      <Project>{f47aa7d6-a5fc-4d18-a25b-b53633c409d2}</Project>
+      <Name>CefGlue</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
