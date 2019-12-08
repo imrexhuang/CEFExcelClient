@@ -76,6 +76,12 @@
   <ItemGroup>
     <EmbeddedResource Include="CefWebBrowser.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CefGlue\CefGlue.csproj">
+      <Project>{f47aa7d6-a5fc-4d18-a25b-b53633c409d2}</Project>
+      <Name>CefGlue</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
